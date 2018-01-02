@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <p v-once>原始值：{{massage}}</p>
+    <!--v-once使其绑定的数据维持初始值不改变-->
+    <p>后面的：{{massage}}</p>
+    <input type="text" v-model="massage">
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    //1.创建vue实例
+//    let vm=new Vue({
+    new Vue({
+        el:'#app',
+        data:{
+            massage:'你好，世界!'
+        }
+    })
+</script>
+</body>
+</html>

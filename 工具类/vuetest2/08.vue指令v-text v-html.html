@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="app">
+    <p>{{massage}}哈哈哈啊</p>
+    <p v-text="massage">哈哈哈啊</p>
+    <p v-html="html"></p>
+    <!-- 会将代码渲染好 -->
+    <p v-text="html"></p>
+    <!-- 不会渲染代码 -->
+    <!-- 往标签添加文本，会覆盖原有的文本 -->
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            massage:'你好，世界!',
+            html:'<span style="color: red">hello</span>'
+        }
+    })
+</script>
+
+</body>
+</html>

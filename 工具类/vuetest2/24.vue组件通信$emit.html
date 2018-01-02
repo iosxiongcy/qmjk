@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-btn @total="allcounter()"></my-btn>
+    <my-btn @total="allcounter()"></my-btn>
+    <my-btn @total="allcounter()"></my-btn>
+    <my-btn @total="allcounter()"></my-btn>
+    <my-btn @total="allcounter()"></my-btn>
+    <!-- 通过自定义绑定事件来监听子组件的该事件被触发，然后调用右边的函数 -->
+
+    <p>所有按钮一共点击了{{totalcounter}}次</p>
+</div>
+
+<template id="my_btn">
+    <button @click="total()">点击了{{counter}}次</button>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+
+    Vue.component('my-btn',{
+        template:'#my_btn',
+        data(){
+            return{
+                counter:0
+            }
+        },
+        methods:{
+            total(){
+                this.counter+=1;
+
+                //通知外界，这个被调用了，然后v-on会监听到
+                this.$emit('total')
+            }
+        }
+    });
+
+    new Vue({
+        el:'#app',
+        data:{
+            totalcounter:0
+        },
+        methods:{
+            allcounter(){
+                this.totalcounter+=1
+            }
+        }
+    })
+</script>
+</body>
+</html>

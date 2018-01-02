@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <p v-if="show">要显示出来</p>
+    <p v-if="false">不要显示出来</p>
+    <p v-if="height>1.55">小明的身高:{{height}}m</p>
+    <p v-if="height1>1.55">小花的身高:{{height1}}m</p>
+    <p v-else="">小花太矮了</p>
+    <!-- v-else结合v-if使用，前者不满足时，进入到else条件里面，不能单独使用，前面紧挨着必须是v-if或者v-else-if -->
+    <p v-if="1">小刚的身高:{{height1}}m</p>
+    <!-- 表达式一定要有值 -->
+    <!-- v-show和v-if不同的是，v-show都会渲染、创建，是display:none，v-if是直接不渲染，以注释代替 -->
+    <!-- v-if是真实的条件渲染，因为它会确保条件块在切换当中适当的销毁与重建条件块内的事件监听器和子组件，当有事件监听器v-if可能创建或销毁事件监听器，v-show只是简单的基于css切换 -->
+    <!-- v-if有更高的切换消耗而v-show有更高的初始渲染消耗，因此如果需要频繁切换使用v-show，如果运行时条件不大可能改变则用v-if较好 -->
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            show:true,
+            hide:false,
+            height:1.70,
+            height1:1.40
+        }
+    })
+</script>
+</body>
+</html>

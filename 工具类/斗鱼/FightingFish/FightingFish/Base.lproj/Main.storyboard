@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NjO-zJ-1A9">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--斗鱼直播-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FightingFish" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMm-xC-fkG">
+                                <rect key="frame" x="129" y="269" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="直播列表"/>
+                                <connections>
+                                    <segue destination="6uI-QI-LiY" kind="show" id="b9u-dl-RPz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="斗鱼直播" id="Pqi-4t-bHc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="122.53521126760563"/>
+        </scene>
+        <!--直播列表-->
+        <scene sceneID="wa6-rw-bCW">
+            <objects>
+                <collectionViewController title="直播列表" id="6uI-QI-LiY" customClass="LivingViewController" customModule="FightingFish" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ski-hN-0VV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="igj-up-ZIH">
+                            <size key="itemSize" width="153" height="134"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Hw3-9l-7v5" customClass="LivingCell" customModule="FightingFish" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="153" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="153" height="134"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pHc-jK-06n">
+                                            <rect key="frame" x="4" y="4" width="145" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="a9H-za-BOR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYv-jd-Ehg">
+                                            <rect key="frame" x="4" y="86" width="38" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoP-pR-7dc">
+                                            <rect key="frame" x="96" y="4" width="53" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTA-wi-ddg">
+                                            <rect key="frame" x="4" y="104" width="77" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="pHc-jK-06n" firstAttribute="top" secondItem="Hw3-9l-7v5" secondAttribute="top" constant="4" id="2z8-0n-z8T"/>
+                                    <constraint firstItem="HoP-pR-7dc" firstAttribute="trailing" secondItem="pHc-jK-06n" secondAttribute="trailing" id="9Tt-P2-QFI"/>
+                                    <constraint firstItem="EYv-jd-Ehg" firstAttribute="bottom" secondItem="pHc-jK-06n" secondAttribute="bottom" id="Eks-fI-bkB"/>
+                                    <constraint firstItem="HoP-pR-7dc" firstAttribute="top" secondItem="pHc-jK-06n" secondAttribute="top" id="HoO-f2-VPf"/>
+                                    <constraint firstItem="bTA-wi-ddg" firstAttribute="top" secondItem="EYv-jd-Ehg" secondAttribute="bottom" id="OnL-wv-dAJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pHc-jK-06n" secondAttribute="trailing" constant="4" id="TQM-yv-BTW"/>
+                                    <constraint firstItem="EYv-jd-Ehg" firstAttribute="leading" secondItem="pHc-jK-06n" secondAttribute="leading" id="emS-Rw-5DO"/>
+                                    <constraint firstItem="pHc-jK-06n" firstAttribute="leading" secondItem="Hw3-9l-7v5" secondAttribute="leading" constant="4" id="luj-5H-jdp"/>
+                                    <constraint firstItem="bTA-wi-ddg" firstAttribute="leading" secondItem="pHc-jK-06n" secondAttribute="leading" id="rz0-r1-Nl1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="bgImgView" destination="pHc-jK-06n" id="4g7-FS-89b"/>
+                                    <outlet property="descLabel" destination="bTA-wi-ddg" id="YiP-Lm-emS"/>
+                                    <outlet property="nameLabel" destination="EYv-jd-Ehg" id="tUt-q7-D00"/>
+                                    <outlet property="numberLabel" destination="HoP-pR-7dc" id="7lA-hK-gXI"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6uI-QI-LiY" id="P2Q-f1-GGW"/>
+                            <outlet property="delegate" destination="6uI-QI-LiY" id="AMu-IY-8G3"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOu-A2-z62" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734.375" y="122.53521126760563"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yca-Ga-Nvo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NjO-zJ-1A9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IzO-Ge-jnz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hHd-1d-ITX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohf-yh-L94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.5" y="122.53521126760563"/>
+        </scene>
+    </scenes>
+</document>

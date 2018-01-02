@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .row{
+            margin-left: 0;
+            margin-right: 0;
+        }
+        body{
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+            <div class="page-header">
+                <h2>啊靠贷款钢铝年龄不能</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-2">
+            <div class="list-group">
+                <!-- 使用 router-link 组件来导航. -->
+                <!-- 通过传入 `to` 属性指定链接. -->
+                <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+                <router-link class="list-group-item" :to="{name:'h5'}">HTML5</router-link>
+                <router-link class="list-group-item" :to="{name:'Java'}">java</router-link>
+                <router-link class="list-group-item" to="/ios">ios</router-link>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="panel">
+                <div class="panel-body">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="h5">
+    <div>
+        <h2>html5</h2>
+        <p>这个是基本介绍</p>
+        <img src="img/a2.jpg" alt="">
+        <div>
+            <ul class="nav nav-tabs">
+                <router-link to="/h5/small">小班</router-link>
+                <router-link to="/h5/big">大班</router-link>
+            </ul>
+            <div class="tab-content">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="small">
+    <div>
+        <h2>html5</h2>
+        <p>这个是小小小小小小</p>
+        <img src="img/a7.jpg" alt="">
+    </div>
+</template>
+<template id="big">
+    <div>
+        <h2>html5</h2>
+        <p>这个是大大大大大</p>
+        <img src="img/a6.jpg" alt="">
+    </div>
+</template>
+<template id="java">
+    <div>
+        <h2>java</h2>
+        <p>这个是基本介绍</p>
+        <img src="img/a3.jpg" alt="">
+    </div>
+</template>
+<template id="ios">
+    <div>
+        <h2>ios</h2>
+        <p>这个是基本介绍</p>
+        <img src="img/a4.jpg" alt="">
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+<script>
+    //1.创建组件
+
+    const Html5=Vue.extend({
+        template:'#h5'
+    });
+    const Java=Vue.extend({
+        template:'#java'
+    });
+    const Ios=Vue.extend({
+        template:'#ios'
+    });
+    const Small=Vue.extend({
+        template:'#small'
+    });
+    const Big=Vue.extend({
+        template:'#big'
+    });
+
+
+    //2.定义路由
+
+    const routes=[
+        {
+            path:'/h5',
+            name:'h5',
+            component:Html5,
+            children:[
+                {path:'/h5/small',component:Small},
+                {path:'/h5/big',component:Big},
+                //根路由
+                {path:'/',redirect:'/h5/small'}
+            ]
+        },
+        {path:'/java',component:Java,name:'Java'},
+        {path:'/ios',component:Ios},
+        //根路由
+        {path:'/',redirect:'/h5'}
+    ];
+
+    //3.创建路由实例
+
+    const router=new VueRouter({
+        routes   //缩写
+    });
+
+
+    //4.创建vue的实例并挂载
+
+    new Vue({
+        router
+    }).$mount('#app')
+</script>
+</body>
+</html>

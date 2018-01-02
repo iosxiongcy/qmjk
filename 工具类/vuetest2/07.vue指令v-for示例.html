@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 600px;
+            border: 2px solid red;
+            text-align: center;
+        }
+        thead{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <table>
+        <thead>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in msg">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.sex}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            msg: [
+                {name: "zhangsan", age: 19, sex: "nan"},
+                {name: "lisi", age: 123, sex: "nv"},
+                {name: "wangwu", age: 12435, sex: "nan"},
+                {name: "zhaoliu", age: 78, sex: "nnv"}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

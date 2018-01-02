@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <p>
+        输入成绩对应的等级是：
+        <span v-if="score>=90">优秀</span>
+        <span v-else-if="score>=75">良好</span>
+        <span v-else-if="score>=60">及格</span>
+        <span v-else>不及格</span>
+    </p>
+    <input type="text" v-model="score">
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            score:90
+        }
+    })
+</script>
+</body>
+</html>

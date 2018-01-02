@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p v-for="(item,index) in score">
+        {{index+":"+item}}
+        <!-- 不需要index的时候可以不写 -->
+    </p>
+    <p v-for="d in dog">
+        {{d}}
+    </p>
+    <p v-for="str in name">
+        {{str}}
+    </p>
+    <p v-for="num in phone">
+        {{num}}
+    </p>
+    <!-- v-for优先级高于其他指令 -->
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            score:[100,88,10,50,30],//数组
+            dog:{                   //对象
+                name:"zhangsan",
+                age:6,
+                height:1.00
+            },
+            name:"lisi",            //字符
+            phone:'1548741268422'
+        }
+    })
+</script>
+</body>
+</html>

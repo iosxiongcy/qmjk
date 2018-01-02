@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!-- v-on绑定事件 缩写是@ -->
+    <p :style="{color:fontColor}">{{massage}}</p>
+    <button v-on:click="massage='哈哈哈'">改变内容</button>
+    <button @click="change()">改变内容</button>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            massage:'你好，世界!',
+            fontColor:'red'
+        },
+        methods:{
+            change(){
+                this.massage='hahahhahahah';
+                this.fontColor='green'
+            }
+        }
+    })
+</script>
+</body>
+</html>

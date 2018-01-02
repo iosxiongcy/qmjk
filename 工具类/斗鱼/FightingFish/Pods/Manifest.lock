@@ -1,0 +1,15 @@
+PODS:
+  - Just (0.6.0)
+  - KFSwiftImageLoader (3.0.0)
+
+DEPENDENCIES:
+  - Just
+  - KFSwiftImageLoader
+
+SPEC CHECKSUMS:
+  Just: 0b60164cc2b516fbddd8948ef7841c70896f1e4d
+  KFSwiftImageLoader: c4656d614329480308b190c2b6f15015a4018ffc
+
+PODFILE CHECKSUM: 1d07d4ad4c235ed99ff86714fde889febaa31aac
+
+COCOAPODS: 1.1.1

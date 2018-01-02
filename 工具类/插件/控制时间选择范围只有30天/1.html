@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Uploadfile</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<input type="text" placeholder="开始时间" name="date1" id="datepicker1" size="24"   onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'datepicker2\')||\'new Date()\'}',minDate:'#F{$dp.$D(\'datepicker2\',{d:-30})}',onpicked:pickedFunc,oncleared:clearedFunc})  " value="" />
+<input type="text" placeholder="结束时间" name="date2" id="datepicker2" size="24"  onfocus="picker2rule(this)" value="" />
+</body>
+<script src="datepicker/WdatePicker.js"></script>
+<!--这个引入一定要把整个文件夹放到某个地方，然后引入这一个文件，不可拆分-->
+
+<script>
+
+    var md=new Date(); //第二个输入框最大值的全局变量
+    //第一个输入框选择好日期的时候操作
+    function pickedFunc(){
+
+        var Y=$dp.cal.getP('y'); //用内置方法获取到选中的年月日
+        var M=$dp.cal.getP('M');
+        var D=$dp.cal.getP('d');
+        M=parseInt(M,10)-1;
+        D=parseInt(D,10)+30;　//字符串的数字转换成int再运算。并且如果超过30天，也能自动处理。
+        var d = new Date()
+        d.setFullYear(Y,M,D) //设置时间
+        var nowDate=new Date();
+        if(nowDate<=d){ //现在的时间比较，如果算出来的值大于现在时间，修改全局变量md为现在时间。
+            md=nowDate;
+        }else{ //全局变量设置为算出来的值得
+            var month=d.getMonth()+1; //月份的范围是（0到11）;
+            md=d.getFullYear()+"-"+month+"-"+d.getDate(); //直接把d给过去会有问题，所以拼成字符串发过去
+        }
+    }
+    //第一个清空的时候的操作
+    function clearedFunc(){
+        md=new Date();
+    }
+    //给第二个输入框定义规则
+    function picker2rule(ele){
+        WdatePicker({el:ele,minDate:'#F{$dp.$D(\'datepicker1\')}',maxDate:md})
+    }
+    //以上为控制选择时间范围
+
+</script>
+</html>

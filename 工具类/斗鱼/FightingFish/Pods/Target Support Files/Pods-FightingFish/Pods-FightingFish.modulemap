@@ -1,0 +1,6 @@
+framework module Pods_FightingFish {
+  umbrella header "Pods-FightingFish-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-div></my-div>
+</div>
+
+<template id="my_div">
+    <div>今天天气很好</div>
+    <!--<input type="text">-->
+    <!-- 两个是不会被渲染的，因为一个组件里面只能有一个出口，如果有多个东西，外面需要一个盒子装起来 -->
+</template>
+<!-- 只能有一个template标签，即使有多个，也只能有一个被表现出来 -->
+<template id="child1">
+    <img src="img/a1.jpg" alt="">
+</template>
+<template id="child2">
+    <img src="img/a2.jpg" alt="">
+</template>
+<script src="js/vue.js"></script>
+<script>
+    //
+    // 1.实例化组件
+    Vue.component('my-div',{
+        template:'#my_div'
+    });
+
+    new Vue({
+        el:'#app'
+    });
+
+
+</script>
+</body>
+</html>

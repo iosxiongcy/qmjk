@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-computer>
+        <div slot="cpu">啊哈哈哈哈哈哈</div>
+        <img slot="gpu" src="img/a2.jpg" alt="">
+        <div slot="memory">heieheiheiehei</div>
+        <input type="text" slot="hard-drive">
+    </my-computer>
+</div>
+
+<template id="my_computer">
+    <div id="main">
+        <slot name="cpu">这里是cpu</slot>
+        <slot name="gpu">这里是gpu</slot>
+        <slot name="memory">这里是内存</slot>
+        <slot name="hard-drive">这里是硬盘</slot>
+
+        <!-- 实名插槽把名字对应上即可插到相应位置，不受顺序影响 -->
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script>
+
+    Vue.component('my-computer',{
+        template:'#my_computer'
+    });
+
+    new Vue({
+        el:'#app',
+        data:{
+            massage:'你好，世界!'
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--<p>{{firstName+" "+lastName}}</p>-->
+    <p>{{fullName}}</p>
+    <button @click="deal()">调用计算属性的set方法</button>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            firstName:'zhang',
+            lastName:'sanfeng'
+        },
+        methods:{
+            deal(){
+                this.fullName='fan leilei'  //相当于调用fullName的set方法
+            }
+        },
+        computed:{
+
+            //get  基本只用get
+//            fullName(){
+//                return this.firstName+" "+this.lastName
+//            }
+
+            fullName:{
+
+                //get
+                get(){
+                    return this.firstName + " " + this.lastName
+                },
+
+                //set
+                set(str){
+                    let nameArr=str.split(' ');
+                    this.firstName=nameArr[0];
+                    this.lastName=nameArr[1];
+                }
+
+            }
+
+
+        }
+    })
+</script>
+</body>
+</html>

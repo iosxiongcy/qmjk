@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .row{
+            margin-left: 0;
+            margin-right: 0;
+        }
+        body{
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+            <div class="page-header">
+                <h2>啊靠贷款钢铝年龄不能</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-2">
+            <div class="list-group">
+                <!-- 使用 router-link 组件来导航. -->
+                <!-- 通过传入 `to` 属性指定链接. -->
+                <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+                <router-link class="list-group-item" to="/h5">HTML5</router-link>
+                <router-link class="list-group-item" to="/java">java</router-link>
+                <router-link class="list-group-item" to="/ios">ios</router-link>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="panel">
+                <div class="panel-body">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="h5">
+    <div>
+        <h2>html5</h2>
+        <p>这个是基本介绍</p>
+        <img src="img/a2.jpg" alt="">
+    </div>
+</template>
+<template id="java">
+    <div>
+        <h2>java</h2>
+        <p>这个是基本介绍</p>
+        <img src="img/a3.jpg" alt="">
+    </div>
+</template>
+<template id="ios">
+    <div>
+        <h2>ios</h2>
+        <p>这个是基本介绍</p>
+        <img src="img/a4.jpg" alt="">
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+<script>
+    //1.创建组件
+
+    const Html5=Vue.extend({
+        template:'#h5'
+    });
+    const Java=Vue.extend({
+        template:'#java'
+    });
+    const Ios=Vue.extend({
+        template:'#ios'
+    });
+
+    //2.定义路由
+
+    const routes=[
+        {path:'/h5',component:Html5},
+        {path:'/java',component:Java},
+        {path:'/ios',component:Ios},
+        //根路由
+        {path:'/',redirect:'/h5'}
+    ];
+
+    //3.创建路由实例
+
+    const router=new VueRouter({
+        routes   //缩写
+    });
+
+
+    //4.创建vue的实例并挂载
+
+    new Vue({
+        router
+    }).$mount('#app')
+</script>
+</body>
+</html>

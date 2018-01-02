@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p>初始值：{{massage}}</p>
+    <p>翻转值：{{massage.split('').reverse().join('')}}</p>
+    <p>函数调用:{{reverseStr()}}</p>
+    <p>计算属性:{{reverse}}</p>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            massage:'你好，世界!'
+        },
+        methods:{
+            reverseStr(){
+                return this.massage.split('').reverse().join('')
+            }
+        },
+        computed:{    //计算属性 ,调用时不加括号，否则为函数
+            //get方法 默认只有get没有set
+            reverse(){
+                return this.massage.split('').reverse().join('')
+            }
+
+            //当页面重新渲染（不是刷新）的时候，计算属性不会变化，直接读取缓存使用，适合较大量的计算和改变频率较低的属性就是，或者不希望有缓存的，而method，就是当页面重新渲染的时候（页面元素的data变化，页面就会重新渲染），都会重新调用method，适合改变频率较大的
+        }
+    })
+</script>
+</body>
+</html>

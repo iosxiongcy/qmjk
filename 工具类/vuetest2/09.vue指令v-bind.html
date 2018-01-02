@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--v-bind 可以绑定属性、样式、类、对象 缩写是:-->
+    <img alt="" style="width: 200px;height: 200px" v-bind:src="imgSrc">
+    <img :alt="alt" style="width: 200px;height: 200px" :src="imgSrc1">
+    <!--属性-->
+
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            imgSrc:'img/a1.jpg',
+            imgSrc1:'img/a2.jpg',
+            alt:'大美女'
+        }
+    })
+</script>
+</body>
+</html>

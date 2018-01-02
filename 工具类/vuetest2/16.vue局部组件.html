@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-data></my-data>
+    <my-color></my-color>
+</div>
+<div id="app1">
+    <my-data></my-data>
+    <my-color></my-color>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    //局部组件
+    //1.组件构造器
+    let Profile = Vue.extend({
+        //1.1 模板选项 意思是组件里面有什么构成
+        template: `
+            <div>
+                <input type="date">
+                <p>今天天气很好</p>
+            </div>
+            `                //在这里面构建组件
+    });
+    let Profile1 = Vue.extend({
+        //1.1 模板选项 意思是组件里面有什么构成
+        template: `
+            <div>
+                <input type="color">
+                <p>色板</p>
+            </div>
+            `                //在这里面构建组件
+    });
+    new Vue({
+        el: '#app',
+        data: {
+            massage: '你好，世界!'
+        },
+        components: {
+            'my-data': Profile,
+            'my-color': Profile1
+        }
+    });
+
+    //简写
+//    new Vue({
+//        el: '#app',
+//        data: {
+//            massage: '你好，世界!'
+//        },
+//        components: {
+//            'my-data': {
+//                //1.1 模板选项 意思是组件里面有什么构成
+//                template: `
+//            <div>
+//                <input type="date">
+//                <p>今天天气很好</p>
+//            </div>
+//            `                //在这里面构建组件
+//            }
+//        }
+//    });
+
+
+    new Vue({   //因为是局部，所以这个不成立
+        el: '#app1',
+        data: {
+            massage: '你好，世界!'
+        }
+    })
+</script>
+</body>
+</html>

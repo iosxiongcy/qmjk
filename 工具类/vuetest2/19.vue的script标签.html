@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-div></my-div>
+</div>
+<script id="my_div" type="text/template">
+    <!--script跟template用法一样，需要限制类型为模板-->
+    <div>今天天气很好</div>
+    <!--<input type="text">-->
+    <!-- 两个是不会被渲染的，因为一个组件里面只能有一个出口，如果有多个东西，外面需要一个盒子装起来 -->
+</script>
+<script src="js/vue.js"></script>
+<script>
+    //
+    // 1.实例化组件
+    Vue.component('my-div',{
+        template:'#my_div'
+    });
+
+    new Vue({
+        el:'#app',
+
+    })
+</script>
+</body>
+</html>

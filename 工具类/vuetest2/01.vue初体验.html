@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p>{{massage}}</p>
+    <p>{{msg}}</p>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    //1.创建vue实例
+    let vm=new Vue({
+        el:'#app',   //关联的视图层，后面是一个选择器
+        data:{       //数据 vue中的model
+            massage:'你好，世界!',
+            msg:'我要上班'
+        }
+    })
+</script>
+</body>
+</html>

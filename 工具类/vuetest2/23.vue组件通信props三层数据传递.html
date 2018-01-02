@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <parent :imgsrc2="img1" :title2="title1"></parent>
+</div>
+
+<!-- 1.先做子组件，将需要接收的数据写好 -->
+<template id="my_img">
+    <img :src="imgsrc3" alt="">
+</template>
+<template id="my_title">
+    <h2>{{title3}}</h2>
+</template>
+
+<!-- 3.做父组件，将子组件拼接，将数据接收好 -->
+<template id="parent">
+    <div>
+        <child1 :imgsrc3="imgsrc2"></child1>
+        <child2 :title3="title2"></child2>
+        <!-- 多层数据传递必须要动态绑定 -->
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script>
+
+    //2.子组件实例
+    let Child1=Vue.extend({
+        template:'#my_img',
+        props:['imgsrc3']   //显式接收父组件传来的数据
+    });
+    let Child2=Vue.extend({
+        template:'#my_title',
+        props:['title3']
+    });
+
+    //4.注册父组件
+    Vue.component('Parent',{
+        props:['imgsrc2','title2'],
+        components:{
+            'child1':Child1,
+            'child2':Child2
+        },
+        template:'#parent'
+    });
+
+
+    new Vue({
+        el:'#app',
+        data:{
+            title1:'今天晴天',
+            img1:'img/a4.jpg'
+        }
+    })
+</script>
+</body>
+</html>

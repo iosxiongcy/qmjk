@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <form class="form">
+        <div class="form-group">
+            <span>姓名:</span>
+            <input type="text" placeholder="请输入姓名" v-model="newStudent.name">
+        </div>
+        <div class="form-group">
+            <span>年龄:</span>
+            <input type="text" placeholder="0" v-model="newStudent.age">
+        </div>
+        <div class="form-group">
+            <span>性别:</span>
+            <select v-model="newStudent.sex">
+                <!--<option value="">请选择性别</option>-->
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <span>手机:</span>
+            <input type="text" placeholder="请输入手机号" v-model="newStudent.phone">
+        </div>
+        <div class="form-group">
+            <div class="btn btn-default" @click="creatStudent()">
+                创建新用户
+            </div>
+        </div>
+    </form>
+    <table class="table table-bordered text-center">
+        <thead>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+            <td>手机</td>
+            <td>删除</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(item,index) in massage">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.sex}}</td>
+            <td>{{item.phone}}</td>
+            <td>
+                <div class="btn btn-danger" @click="deleteStudent(index)">删除</div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            massage: [
+                {name: '张三', age: 20, sex: '男', phone: '11111111'},
+                {name: '李四', age: 30, sex: '女', phone: '22222222'},
+                {name: '王五', age: 50, sex: '女', phone: '33333333'},
+                {name: '赵六', age: 10, sex: '男', phone: '44444444'},
+            ],
+            newStudent: {name: '', age: 0, sex: '男', phone: ''}
+        },
+        methods: {
+            creatStudent() {
+                if (this.newStudent.name === "") {
+                    alert("姓名不能为空");
+                    return;
+                }
+                if (this.newStudent.age <= 0) {
+                    alert("年龄必须大于0");
+                    return;
+                }
+                if (this.newStudent.phone === "") {
+                    alert("手机号不能为空");
+                    return;
+                }
+                this.massage.unshift(this.newStudent);
+                this.newStudent = {name: '', age: 0, sex: '男', phone: ''}
+            },
+            deleteStudent(index){
+                this.massage.splice(index,1)
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dialog.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.dialog.js"></script>
+</head>
+<body>
+<div class="delete">
+    点击删除
+</div>
+</body>
+<script>
+    $(".delete").click(function () {
+        $.dialog.confirm({content: "你确定要删除吗", callback: "callback();"});
+    });
+    function callback() {
+        alert('这是点击删除后的回调函数');
+    }
+</script>
+</html>

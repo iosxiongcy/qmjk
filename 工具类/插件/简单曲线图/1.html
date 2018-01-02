@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="chart" style="width: 1000px;height: 600px"></div>
+
+
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script>
+    var chart = Highcharts.chart('chart', {
+        chart: {
+            type: 'spline'
+        },
+        colors: ['#0EC4CF', '#434348', '#90ed7d', '#f7a35c', '#8085e9',
+            '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
+        title: {
+            text: '图片点击次数',
+            align:'left',
+            style:{
+                color:'#4A4A4A',
+                fontSize:'18px',
+                lineHeight:'25px'
+            }
+        },
+        xAxis: {
+            categories: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+            tickmarkPlacement:"on"
+        },
+        yAxis: {
+            title: {
+                text:null
+            },
+            labels: {
+                formatter: function () {
+                    return this.value;
+                }
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#fff',
+                    lineWidth: 1,
+                    fillColor:'#0EC4CF'
+                }
+            }
+        },
+        series: [{
+            name: '图片点击次数',
+            marker: {
+                symbol: 'circle'
+            },
+            data: [{
+                y: 50
+            }, 20, 60, 30, 50,100,50,70,30,20,60,70],
+
+            //这里是控制图表的数据值
+
+
+
+            showInLegend: false
+        }],
+        credits:{
+            enabled: false // 禁用版权信息
+        }
+    });
+</script>
+</body>
+</html>

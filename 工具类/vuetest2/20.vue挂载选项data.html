@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-div></my-div>
+</div>
+
+<template id="my_div">
+    <div>
+        <div>今天天气很好</div>
+        <p>{{massage}}</p>
+    </div>
+
+</template>
+<script src="js/vue.js"></script>
+<script>
+    //
+    // 1.实例化组件
+    Vue.component('my-div',{
+        template:'#my_div',
+//        data:{
+//            massage:"你好"
+//        }
+        data(){      //在component或者extend里面使用data选项时，不能以对象的形式，必须以函数的形式
+            return {
+                massage:"你好"
+            }
+        }
+    });
+
+    new Vue({
+        el:'#app'
+    });
+
+</script>
+</body>
+</html>
