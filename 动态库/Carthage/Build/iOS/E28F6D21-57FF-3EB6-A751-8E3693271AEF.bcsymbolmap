@@ -1,0 +1,266 @@
+BCSymbolMap Version: 2.0
+Apple LLVM version 8.1.0 (clang-802.0.42)
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJExtensionConst.m
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension
++[MJFoundation foundationClasses]
++[MJFoundation isClassFromFoundation:]
+___38+[MJFoundation isClassFromFoundation:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+_foundationClasses_
+___block_descriptor_tmp
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJFoundation.m
+__destroy_helper_block_
+__copy_helper_block_
+__38+[MJFoundation isClassFromFoundation:]_block_invoke
+-[MJProperty init]
++[MJProperty cachedPropertyWithProperty:]
+-[MJProperty setProperty:]
+-[MJProperty valueForObject:]
+-[MJProperty setValue:forObject:]
+-[MJProperty propertyKeysWithStringKey:]
+-[MJProperty setOriginKey:forClass:]
+-[MJProperty setPorpertyKeys:forClass:]
+-[MJProperty propertyKeysForClass:]
+-[MJProperty setObjectClassInArray:forClass:]
+-[MJProperty objectClassInArrayForClass:]
+-[MJProperty property]
+-[MJProperty name]
+-[MJProperty type]
+-[MJProperty srcClass]
+-[MJProperty setSrcClass:]
+-[MJProperty propertyKeysDict]
+-[MJProperty setPropertyKeysDict:]
+-[MJProperty objectClassInArrayDict]
+-[MJProperty setObjectClassInArrayDict:]
+-[MJProperty .cxx_destruct]
+_OBJC_IVAR_$_MJProperty._propertyKeysDict
+_OBJC_IVAR_$_MJProperty._objectClassInArrayDict
+_OBJC_IVAR_$_MJProperty._property
+_OBJC_IVAR_$_MJProperty._name
+_OBJC_IVAR_$_MJProperty._type
+_OBJC_IVAR_$_MJProperty._srcClass
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJProperty.m
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJProperty.h
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+-[MJPropertyKey valueInObject:]
+-[MJPropertyKey name]
+-[MJPropertyKey setName:]
+-[MJPropertyKey type]
+-[MJPropertyKey setType:]
+-[MJPropertyKey .cxx_destruct]
+_OBJC_IVAR_$_MJPropertyKey._name
+_OBJC_IVAR_$_MJPropertyKey._type
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJPropertyKey.m
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJPropertyKey.h
++[MJPropertyType initialize]
++[MJPropertyType cachedTypeWithCode:]
+-[MJPropertyType setCode:]
+-[MJPropertyType code]
+-[MJPropertyType isIdType]
+-[MJPropertyType isNumberType]
+-[MJPropertyType isBoolType]
+-[MJPropertyType typeClass]
+-[MJPropertyType isFromFoundation]
+-[MJPropertyType isKVCDisabled]
+-[MJPropertyType .cxx_destruct]
+_types_
+_OBJC_IVAR_$_MJPropertyType._code
+_OBJC_IVAR_$_MJPropertyType._idType
+_OBJC_IVAR_$_MJPropertyType._KVCDisabled
+_OBJC_IVAR_$_MJPropertyType._typeClass
+_OBJC_IVAR_$_MJPropertyType._fromFoundation
+_OBJC_IVAR_$_MJPropertyType._numberType
+_OBJC_IVAR_$_MJPropertyType._boolType
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJPropertyType.m
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/MJPropertyType.h
++[NSObject(MJClass) load]
++[NSObject(MJClass) dictForKey:]
++[NSObject(MJClass) mj_enumerateClasses:]
++[NSObject(MJClass) mj_enumerateAllClasses:]
++[NSObject(MJClass) mj_setupIgnoredPropertyNames:]
++[NSObject(MJClass) mj_totalIgnoredPropertyNames]
++[NSObject(MJClass) mj_setupIgnoredCodingPropertyNames:]
++[NSObject(MJClass) mj_totalIgnoredCodingPropertyNames]
++[NSObject(MJClass) mj_setupAllowedPropertyNames:]
++[NSObject(MJClass) mj_totalAllowedPropertyNames]
++[NSObject(MJClass) mj_setupAllowedCodingPropertyNames:]
++[NSObject(MJClass) mj_totalAllowedCodingPropertyNames]
++[NSObject(MJClass) mj_setupBlockReturnValue:key:]
++[NSObject(MJClass) mj_totalObjectsWithSelector:key:]
+___53+[NSObject(MJClass) mj_totalObjectsWithSelector:key:]_block_invoke
+_allowedPropertyNamesDict_
+_ignoredPropertyNamesDict_
+_allowedCodingPropertyNamesDict_
+_ignoredCodingPropertyNamesDict_
+_MJAllowedPropertyNamesKey
+_MJIgnoredPropertyNamesKey
+_MJAllowedCodingPropertyNamesKey
+_MJIgnoredCodingPropertyNamesKey
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/NSObject+MJClass.m
+__53+[NSObject(MJClass) mj_totalObjectsWithSelector:key:]_block_invoke
+-[NSObject(MJCoding) mj_encode:]
+___32-[NSObject(MJCoding) mj_encode:]_block_invoke
+-[NSObject(MJCoding) mj_decode:]
+___32-[NSObject(MJCoding) mj_decode:]_block_invoke
+___copy_helper_block_.24
+___destroy_helper_block_.25
+___block_descriptor_tmp.26
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_MJCoding
+l_OBJC_LABEL_PROTOCOL_$_MJCoding
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/NSObject+MJCoding.m
+__32-[NSObject(MJCoding) mj_decode:]_block_invoke
+__32-[NSObject(MJCoding) mj_encode:]_block_invoke
++[NSObject(MJKeyValue) mj_error]
++[NSObject(MJKeyValue) setMj_error:]
++[NSObject(MJKeyValue) mj_referenceReplacedKeyWhenCreatingKeyValues:]
++[NSObject(MJKeyValue) mj_isReferenceReplacedKeyWhenCreatingKeyValues]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___70+[NSObject(MJKeyValue) mj_isReferenceReplacedKeyWhenCreatingKeyValues]_block_invoke
++[NSObject(MJKeyValue) load]
+-[NSObject(MJKeyValue) mj_setKeyValues:]
+-[NSObject(MJKeyValue) mj_setKeyValues:context:]
+___48-[NSObject(MJKeyValue) mj_setKeyValues:context:]_block_invoke
+___copy_helper_block_.111
+___destroy_helper_block_.112
++[NSObject(MJKeyValue) mj_objectWithKeyValues:]
++[NSObject(MJKeyValue) mj_objectWithKeyValues:context:]
++[NSObject(MJKeyValue) mj_objectWithFilename:]
++[NSObject(MJKeyValue) mj_objectWithFile:]
++[NSObject(MJKeyValue) mj_objectArrayWithKeyValuesArray:]
++[NSObject(MJKeyValue) mj_objectArrayWithKeyValuesArray:context:]
++[NSObject(MJKeyValue) mj_objectArrayWithFilename:]
++[NSObject(MJKeyValue) mj_objectArrayWithFile:]
+-[NSObject(MJKeyValue) mj_keyValues]
+-[NSObject(MJKeyValue) mj_keyValuesWithKeys:]
+-[NSObject(MJKeyValue) mj_keyValuesWithIgnoredKeys:]
+-[NSObject(MJKeyValue) mj_keyValuesWithKeys:ignoredKeys:]
+___57-[NSObject(MJKeyValue) mj_keyValuesWithKeys:ignoredKeys:]_block_invoke
+___57-[NSObject(MJKeyValue) mj_keyValuesWithKeys:ignoredKeys:]_block_invoke_2
+___copy_helper_block_.186
+___destroy_helper_block_.187
+___copy_helper_block_.192
+___destroy_helper_block_.193
++[NSObject(MJKeyValue) mj_keyValuesArrayWithObjectArray:]
++[NSObject(MJKeyValue) mj_keyValuesArrayWithObjectArray:keys:]
++[NSObject(MJKeyValue) mj_keyValuesArrayWithObjectArray:ignoredKeys:]
++[NSObject(MJKeyValue) mj_keyValuesArrayWithObjectArray:keys:ignoredKeys:]
+-[NSObject(MJKeyValue) mj_JSONData]
+-[NSObject(MJKeyValue) mj_JSONObject]
+-[NSObject(MJKeyValue) mj_JSONString]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) setKeyValues:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) setKeyValues:error:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) setKeyValues:context:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) setKeyValues:context:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) referenceReplacedKeyWhenCreatingKeyValues:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValues]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesWithError:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesWithKeys:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesWithKeys:error:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesWithIgnoredKeys:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesWithIgnoredKeys:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesArrayWithObjectArray:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesArrayWithObjectArray:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesArrayWithObjectArray:keys:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesArrayWithObjectArray:keys:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesArrayWithObjectArray:ignoredKeys:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) keyValuesArrayWithObjectArray:ignoredKeys:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithKeyValues:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithKeyValues:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithKeyValues:context:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithKeyValues:context:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithFilename:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithFilename:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithFile:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectWithFile:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithKeyValuesArray:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithKeyValuesArray:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithKeyValuesArray:context:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithKeyValuesArray:context:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithFilename:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithFilename:error:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithFile:]
++[NSObject(MJKeyValueDeprecated_v_2_5_16) objectArrayWithFile:error:]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) JSONData]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) JSONObject]
+-[NSObject(MJKeyValueDeprecated_v_2_5_16) JSONString]
+_MJErrorKey
+_MJReferenceReplacedKeyWhenCreatingKeyValuesKey
+_numberFormatter_
+___block_descriptor_tmp.114
+___block_descriptor_tmp.189
+___block_descriptor_tmp.195
+l_OBJC_PROTOCOL_$_MJKeyValue
+l_OBJC_LABEL_PROTOCOL_$_MJKeyValue
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/NSObject+MJKeyValue.m
+__57-[NSObject(MJKeyValue) mj_keyValuesWithKeys:ignoredKeys:]_block_invoke_2
+__57-[NSObject(MJKeyValue) mj_keyValuesWithKeys:ignoredKeys:]_block_invoke
+__48-[NSObject(MJKeyValue) mj_setKeyValues:context:]_block_invoke
+__70+[NSObject(MJKeyValue) mj_isReferenceReplacedKeyWhenCreatingKeyValues]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
++[NSObject(Property) load]
++[NSObject(Property) dictForKey:]
++[NSObject(Property) propertyKey:]
+___34+[NSObject(Property) propertyKey:]_block_invoke
+___34+[NSObject(Property) propertyKey:]_block_invoke.23
++[NSObject(Property) propertyObjectClassInArray:]
+___49+[NSObject(Property) propertyObjectClassInArray:]_block_invoke
+___copy_helper_block_.31
+___destroy_helper_block_.32
++[NSObject(Property) mj_enumerateProperties:]
++[NSObject(Property) properties]
+___32+[NSObject(Property) properties]_block_invoke
+___copy_helper_block_.70
+___destroy_helper_block_.71
++[NSObject(Property) mj_setupNewValueFromOldValue:]
++[NSObject(Property) mj_getNewValueFromObject:oldValue:property:]
+___65+[NSObject(Property) mj_getNewValueFromObject:oldValue:property:]_block_invoke
+___copy_helper_block_.83
+___destroy_helper_block_.84
++[NSObject(Property) mj_setupObjectClassInArray:]
++[NSObject(Property) mj_setupReplacedKeyFromPropertyName:]
++[NSObject(Property) mj_setupReplacedKeyFromPropertyName121:]
++[NSObject(MJPropertyDeprecated_v_2_5_16) enumerateProperties:]
++[NSObject(MJPropertyDeprecated_v_2_5_16) setupNewValueFromOldValue:]
++[NSObject(MJPropertyDeprecated_v_2_5_16) getNewValueFromObject:oldValue:property:]
++[NSObject(MJPropertyDeprecated_v_2_5_16) setupReplacedKeyFromPropertyName:]
++[NSObject(MJPropertyDeprecated_v_2_5_16) setupReplacedKeyFromPropertyName121:]
++[NSObject(MJPropertyDeprecated_v_2_5_16) setupObjectClassInArray:]
+_replacedKeyFromPropertyNameDict_
+_replacedKeyFromPropertyName121Dict_
+_newValueFromOldValueDict_
+_objectClassInArrayDict_
+_cachedPropertiesDict_
+_MJReplacedKeyFromPropertyNameKey
+_MJReplacedKeyFromPropertyName121Key
+_MJNewValueFromOldValueKey
+_MJObjectClassInArrayKey
+_MJCachedPropertiesKey
+___block_descriptor_tmp.33
+___block_descriptor_tmp.72
+___block_descriptor_tmp.86
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/NSObject+MJProperty.m
+__65+[NSObject(Property) mj_getNewValueFromObject:oldValue:property:]_block_invoke
+__32+[NSObject(Property) properties]_block_invoke
+__49+[NSObject(Property) propertyObjectClassInArray:]_block_invoke
+__34+[NSObject(Property) propertyKey:]_block_invoke.23
+__34+[NSObject(Property) propertyKey:]_block_invoke
+-[NSString(MJExtension) mj_underlineFromCamel]
+-[NSString(MJExtension) mj_camelFromUnderline]
+-[NSString(MJExtension) mj_firstCharLower]
+-[NSString(MJExtension) mj_firstCharUpper]
+-[NSString(MJExtension) mj_isPureInt]
+-[NSString(MJExtension) mj_url]
+-[NSString(MJExtensionDeprecated_v_2_5_16) underlineFromCamel]
+-[NSString(MJExtensionDeprecated_v_2_5_16) camelFromUnderline]
+-[NSString(MJExtensionDeprecated_v_2_5_16) firstCharLower]
+-[NSString(MJExtensionDeprecated_v_2_5_16) firstCharUpper]
+-[NSString(MJExtensionDeprecated_v_2_5_16) isPureInt]
+-[NSString(MJExtensionDeprecated_v_2_5_16) url]
+/Users/qmjkkj001/Desktop/动态库/Carthage/Checkouts/MJExtension/MJExtension/NSString+MJExtension.m
+/Users/qmjkkj001/Library/Caches/org.carthage.CarthageKit/DerivedData/8.3.2_8E2002/MJExtension/3.0.13/Build/Intermediates/MJExtensionExample.build/Release-iphoneos/MJExtension.build/DerivedSources/MJExtension_vers.c

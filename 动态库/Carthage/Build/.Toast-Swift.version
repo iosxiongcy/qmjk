@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "97d1f52cc374c4d835f86d9f1187653f64d5f1528ae3d5afd32d636c65230df8",
+      "name" : "ToastSwiftFramework"
+    }
+  ],
+  "commitish" : "2.0.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

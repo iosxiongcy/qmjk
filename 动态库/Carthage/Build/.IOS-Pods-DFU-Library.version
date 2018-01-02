@@ -1,0 +1,22 @@
+{
+  "iOS" : [
+    {
+      "hash" : "b5d5158ab0c15b3def603512c7d7f86654a4eb1b552345da25b01e01ae1b5ae9",
+      "name" : "Zip"
+    },
+    {
+      "hash" : "26b1d4421ebb7712a7f9f3ded6b5601662251c1c4a294afe39d37199ab7cc473",
+      "name" : "iOSDFULibrary"
+    }
+  ],
+  "commitish" : "4.0.2",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "390e0985a34e0777707b64c2f958e4cefdaf53966db452c438f4f536bbc28a4b",
+      "name" : "MJExtension"
+    }
+  ],
+  "commitish" : "3.0.13",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

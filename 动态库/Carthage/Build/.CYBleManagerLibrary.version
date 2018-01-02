@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "a171fe40d6e4c9d2a2d794b4fada0a86af21b30b0108235b05ae34c815c66f65",
+      "name" : "CYBleManagerLibrary"
+    }
+  ],
+  "commitish" : "0.0.3",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}
