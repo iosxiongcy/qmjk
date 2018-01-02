@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<form action="1.php" method="get">
+	<fieldset>
+	<legend>分组信息</legend>
+	</fieldset>
+		用户名:<input type="text" name="username" maxlength="6"> <br>
+		密码:<input type="password" name="password"></input> <br>	
+		性别:<input type="radio" name="sex" checked="checked">男</input><input type="radio" name="sex">女</input> <br>
+		
+		<!-- 下拉列表 -->
+		<br>
+		省(市): <select multiple="mutiple">
+			<option value="">北京</option>
+			<option value="">河南</option>
+			<option value="">山西</option>
+		</select>
+		市(区):
+		<select>
+			<optgroup label="北京市">
+				<option>昌平区</option>
+				<option>昌平区</option>
+				<option>昌平区</option>
+				<option>昌平区</option>
+				<option>昌平区</option>
+			</optgroup>
+		</select> <br>
+		<!-- 多选框 -->
+		<input type="checkbox" checked="checked">抽烟</input>
+		<input type="checkbox">喝酒</input>
+		<input type="checkbox">烫头</input> <br>
+
+		<!-- 多行文本框 -->
+		<textarea cols="40" rows="3">hello,world!</textarea> <br>
+
+		<!-- 文件上传控件 -->
+		<input type="file"></input> <br>
+
+		<!-- 提交按钮 -->
+		<input type="button" value="提交"></input> <br>
+		<input type="image" src="1.png"></input> <br>
+		<input type="reset"></input> <br>
+		<input type="submit"></input>
+		
+	</form>
+</body>
+</html>

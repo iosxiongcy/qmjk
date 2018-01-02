@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单绑定</title>
+</head>
+<body>
+	
+
+<div id="demo">
+	<input v-model="message" placeholder="edit me"></input>
+	<p>Message is: {{ message }}</p>
+</div>
+
+<div id="demo-1">
+	<span>Multiline message is:</span>
+<p style="white-space: pre-line;">{{ message }}</p>
+<br>
+<textarea v-model="message" placeholder="add multiple lines"></textarea>
+</div>
+
+<div id="demo-2">
+	<input type="checkbox" id="checkbox" v-model="checked"></input>
+	<label for="checkbox">{{ checked }}</label>
+</div>
+
+<div id="demo-3">
+	<input type="checkbox" id="jack" value="Jack" v-model="checkedNames"></input>
+	<label for="jack">Jack</label>
+
+	<input type="checkbox" id="john" value="John" v-model="checkedNames"></input>
+	<label for="john">John</label>
+
+	<input type="checkbox" id="mike" value="Mike" v-model="checkedNames"></input>
+	<label for="mike">Mike</label>
+	<br>
+	<span>Checked names: {{ checkedNames }}</span>
+</div>
+
+<!-- 单选按钮 -->
+<div id="demo-4">
+	<input type="radio" id="one" value="One" v-model="picked"></input>
+	<label for="one">One</label>
+	<br>
+	<input type="radio" id="two" value="Two" v-model="picked"></input>
+	<label for="two">Two</label>
+	<br>
+	<span>Picked: {{ picked }}</span>
+</div>
+
+<!-- 单选选择框 -->
+<div id="demo-5">
+	<select v-model="selected">
+		<option disabled value="">请选择</option>
+		<option>A</option>
+		<option>B</option>
+		<option>C</option>
+	</select>
+	<span>Selected: {{ selected }}</span>
+</div>
+
+<!-- 多选选择框 -->
+<div id="demo-6">
+	<select v-model="selected" multiple style="width: 50px;">
+		<option>A</option>
+		<option>B</option>
+		<option>C</option>
+	</select>
+	<br>
+	<span>Selected: {{ selected }}</span>
+</div>
+
+<!-- for -->
+<div id="demo-7">
+	<select v-model="selected">
+		<option v-for="option in options" v-bind:value="option.value">{{ option.text }}</option>
+	</select>
+	<span>Selected: {{ selected }}</span>
+</div>
+
+<div id="demo-8">
+	<input
+		type="checkbox"
+		v-model="toggle"
+		true-value="yes"
+		false-value="no"
+	></input>
+</div>
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+
+var app8 = new Vue({
+	el: '#demo-8',
+	data: {
+		toggle: ''
+	}
+})
+
+new Vue({
+	el: '#demo-7',
+	data: {
+		selected: 'A',
+		options: [
+			{ text: 'One', value: 'A' },
+			{ text: 'Two', value: 'B' },
+			{ text: 'Three', value: 'C' }
+		]
+	}
+})
+
+new Vue({
+	el: '#demo-6',
+	data: {
+		selected: []
+	}
+})
+
+new Vue({
+	el: '#demo-5',
+	data: {
+		selected: ''
+	}
+})
+
+new Vue({
+	el: '#demo-4',
+	data: {
+		picked: ''
+	}
+})
+
+new Vue({
+	el: '#demo-3',
+	data: {
+		checkedNames: []
+	}
+})
+
+new Vue({
+	el: '#demo-2',
+	data: {
+		checked: ''
+	}
+})
+
+new Vue({
+	el: '#demo-1',
+	data: {
+		message: ''
+	}
+})
+
+		new Vue({
+			el: '#demo',
+			data: {
+				message: ''
+			}
+		})
+</script>
+</body>
+</html>

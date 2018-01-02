@@ -1,0 +1,21 @@
+
+1.官网教程
+https://cn.vuejs.org/v2/guide/
+
+2.官网API
+https://cn.vuejs.org/v2/api/
+
+3.配置教程+demo
+https://www.jianshu.com/p/d87d7140944e
+
+vue-cli目录结构
+http://www.jb51.net/article/118561.htm
+
+4.elementUI官网
+http://element-cn.eleme.io/#/zh-CN/component/installation
+
+5.vue教程
+http://study.163.com/course/courseMain.htm?courseId=1004179049
+
+6.路由 router教程
+http://study.163.com/course/introduction/1004260007.htm

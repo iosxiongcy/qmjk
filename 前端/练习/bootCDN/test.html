@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="js/jquery.min.js"></script>
+    
+    <style>
+        .isSelect {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+    </style>
+    
+</head>
+<body>
+
+
+
+<div class="isSelect">
+
+
+
+</div>
+
+</body>
+
+<script>
+
+    var a = $('.isSelect');
+    a.attr('isSele', false);
+
+
+    function toBool(str) {
+        if (str == 'true') {
+            return true;
+        } else  {
+            return false;
+        }
+    }
+
+    a.on('click', function () {
+//        alert('1');
+        var attr = a.attr('isSele');
+        var isSelect = toBool(attr);
+
+        if (attr) {
+            console.log('true');
+            a.attr('isSele', )
+        } else {
+            console.log('false');
+        }
+
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Uploadfile</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
+        }
+
+        img {
+            border: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+        .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .container-fluid ,.container{
+            padding: 0;
+        }
+
+        .top{
+            background: url("../static/img/sign_in_bg.jpeg");
+            background-size: cover;
+        }
+
+        .top .navbar{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .top  .navbar .collapse .nav_middle{
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: -moz-calc((100% - 316px) / 2);
+            margin-left: -webkit-calc((100% - 316px) / 2);
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">驿路道</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav nav_middle">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">案例中心</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">QQ</a></li>
+                    <li><a href="#">微信</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+
+//        var body_w=$("body,html").width();
+//        $(".top").width(body_w).height(body_w / 1.77);
+//        $(window).resize(function () {
+//            var body_w=$("body,html").width();
+//            $(".top").width(body_w).height(body_w / 1.77);
+//        });
+        $(".top").width("100%");
+        $(".top").height(($(".top").width()) / 1.77);
+        $(window).resize(function () {
+            $(".top").width("100%");
+            $(".top").height(($(".top").width()) / 1.77);
+
+        })
+    })
+
+</script>
+</html>

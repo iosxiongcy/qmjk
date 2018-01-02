@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0 ;
+            margin: 0 ;
+        }
+        .box{
+            width: 1200px;
+            height: 700px;
+            line-height: 700px;
+            text-align: center;
+            font-size: 100px;
+            margin: 0 auto 20px;
+        }
+        .side{
+            position: fixed;
+            left: 0;
+            top: 30px;
+            /*display: none;*/
+        }
+        .lump{
+            width:130px;
+            height: 70px;
+            background: cornflowerblue;
+            margin: 10px 0;
+            border-radius: 30px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+        }
+        .line{
+            margin: 10px auto;
+            width: 2px;
+            height: 20px;
+            background: red;
+            display: none;
+        }
+        .active{
+            background:skyblue ;
+        }
+    </style>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            $(".side").hide();
+            var lump_list=$(".side .lump").not(".last").not(".first");
+            var box_list=$(".box").not(".box_first").not(".box_last");
+            $(".active").next().show();
+            lump_list.click(function(){
+                $("body").animate({scrollTop:box_list.eq($(lump_list).index(this)).offset().top},500);
+                $("lump_list").css({"background":"cornflowerblue"});
+                $(this).addClass("active").siblings().removeClass("active");
+                $(".line").hide();
+                $(this).next().show();
+            });
+            $(".last").click(function(){
+                $("body").animate({scrollTop:0},500);
+            });
+
+
+
+            $(window).scroll(function () {
+                var z=$("body").scrollTop();
+                if(z>=500){
+                    $(".side").fadeIn();
+                }else {
+                    $(".side").fadeOut();
+                }
+                box_list.each(function () {
+                    var box_top = box_list.eq($(box_list).index(this)).offset().top + 380;   //匹配每一个元素的的顶部位移距离
+                    if (box_top> z) {        //元素的顶部位移距离大于滚动条的距离,几乎无意义
+                        lump_list.eq($(box_list).index($(this))).addClass("active").siblings().removeClass("active");
+                        $(".line").hide();
+                        lump_list.eq($(box_list).index($(this))).next().show();
+                        return false;//中断循环    不中断的话会直接执行到最大下标
+                    }
+                });
+
+            });
+
+
+        })
+    </script>
+</head>
+<body>
+<div class="box box_first" style="background: lightblue">顶部</div>
+<div class="box" style="background: lightblue">对应内容一部分</div>
+<div class="box" style="background: orchid">对应内容二部分</div>
+<div class="box" style="background: palevioletred">对应内容三部分</div>
+<div class="box" style="background: hotpink">对应内容四部分</div>
+<div class="box" style="background: skyblue">对应内容五部分</div>
+<div class="box" style="background: grey">对应内容六部分</div>
+<div class="box box_last" style="background: lightblue">底部</div>
+<div class="side" id="side">
+    <div class="lump active">内容一</div>
+    <div class="line"></div>
+    <div class="lump">内容二</div>
+    <div class="line"></div>
+    <div class="lump">内容三</div>
+    <div class="line"></div>
+    <div class="lump">内容四</div>
+    <div class="line"></div>
+    <div class="lump">内容五</div>
+    <div class="line"></div>
+    <div class="lump">内容六</div>
+    <div class="line"></div>
+    <div class="lump last">去顶部</div>
+</div>
+</body>
+</html>

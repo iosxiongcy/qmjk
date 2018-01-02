@@ -1,0 +1,46 @@
+
+
+.main {
+    min-height: 700px;
+}
+
+.main-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.main-item {
+    color: #999999;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.main-item h2 {
+    color: black;
+}
+
+.main-item span {
+    font-size: 15px;
+}
+
+.main-item p:hover, h2:hover {
+    cursor: pointer;
+    color: black;
+
+}
+
+.main-item span a {
+    color: #5daeff;
+}
+
+.main-line {
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: #d1d1d1;
+    margin-bottom: 0;
+}
+
+.page-control {
+}
+

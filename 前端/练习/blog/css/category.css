@@ -1,0 +1,23 @@
+.ct-main {
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+
+main {
+    min-height: 534px;
+}
+
+.category li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.category li a {
+    margin-left: 20px;
+    color: #5daeff;
+}
+
+.category li a:hover {
+    cursor: pointer;
+}

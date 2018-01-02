@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<body style="padding-top: 100px;">
+
+
+<div class="container" id="mainView">
+
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="text" class="form-control" id="exmapleInput" placeholder="input">
+            <button type="button" class="btn btn-primary" id="button">Transfer cash</button>
+        </div>
+    </form>
+
+
+    <div class="alert alert-info alert-dismissable hidden" role="alert" id="alert">
+        <button type="button" class="close" aria-label="Close" id="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <p>asdasd</p>
+    </div>
+    
+    
+</div>
+
+<script>
+
+    $(function () {
+
+        var mainView = $('#mainView');
+        var data = [];
+        var index = 0;
+
+        $('#button').click(function () {
+            var inputStr = $('#exmapleInput').val();
+            console.log('输入的--' + inputStr);
+            if (inputStr.length == 0) {
+                alert('请输入内容');
+                return;
+            }
+
+            data.push(inputStr);
+
+            var cloneView = $('#alert').clone(true);
+
+            cloneView.removeClass('hidden');
+            cloneView.attr('id', 'alert'+index);
+            cloneView.find('.close').attr('id', 'close'+index);
+            mainView.append(cloneView);
+
+            $('#alert'+index).find('p').html(inputStr);
+
+            cloneView.find('.close').click(function () {
+                var i = cloneView.find('.close').attr('id').slice(5);
+                console.log('截取的--'+i);
+
+                $('#alert'+i).remove();
+            });
+
+            index ++;
+
+
+
+        })
+
+
+    })
+
+</script>
+
+
+
+</body>
+</html>

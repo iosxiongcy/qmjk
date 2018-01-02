@@ -1,0 +1,23 @@
+1. 引入图标
+    https://www.jd.com/favicon.ico
+    <link rel="icon" href="favicon.ico">
+    bitbug.net -- 在线制作ico图标的网站
+
+2. 小知识
+    u  ins  下划线
+    i  em   倾斜
+    s  del  删除线
+
+
+    font-weight: normal;   加粗变正常
+    font-style:  normal;   倾斜变正常
+    text-decoration: none; 下划线删除线变正常
+    outline-style: none;   去除蓝色外边框
+    resize: none;		   禁止文本框拖拽
+
+3. 权限等级
+    div a span         	1
+    .box  .site-nav    	10
+    #box #site-nav      100
+    <div style="width"	1000
+    !important			1/0

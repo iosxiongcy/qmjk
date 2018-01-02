@@ -1,0 +1,185 @@
+-------------1. 快捷键-----------
+html:xt+tab   				结构代码
+tab 		  				补全代码标签
+command+shift+d				快速复制一行
+ctrl+shift+k				快速删除一行
+command+鼠标左键				集体输入
+command+L					快速选中一行
+ctrl+command+↑				上移一行
+
+-------------2. 标签-----------
+单标签:
+	<br>					换行标签
+	<hr>					水平线标签
+双标签:
+	<p></p>					段落标签
+	<h1-6></h1-6>			标题标签
+		h1在一个页面只能出现一次.
+	<font></font>			文本标签
+	<strong></strong>		文本加粗标签
+		<b></b>					文本加粗标签
+	<em></em>				文本倾斜标签
+		<i></i>					文本倾斜标签
+	<del></del>				删除线标签
+		<s></s>					删除线标签
+	<ins></ins>				下划线标签
+		<u></u>					下划线标签
+图片标签:
+	<img src="" alt="">		
+
+-------------3. 路径-----------
+相对路径:
+	在同一个目录  				直接写名字
+	在下一级目录					/目录名/名字
+	在上一级目录					../名字
+绝对路径:
+	
+-------------4. 超链接-----------
+<a href="" title="" target=""></a>
+target:控制页面打开方式
+	_blank:在新页面打开
+	_self: 在当前页面打开
+
+-------------5. 锚链接-----------
+1. 设置锚点  id="锚点"
+2. <a href="#锚点"></a>
+
+-------------6. 压缩文件下载-----------
+
+-------------7. 超链接优化写法-----------
+<base target="_blank"></base>
+:让所有的超链接都在新窗口打开
+
+-------------8. 特殊符号-----------
+&nbsp;				空格
+&lt;				小于号
+&gt;				大于号
+
+-------------9. 列表-----------
+- 无序列表				
+<ul type="disc">
+	<li></li>		列表项
+	<li></li>
+</ul>
+type:
+	1.square   		方块
+	2.disc 			圆圈
+	3.circle 		空心圆圈
+
+- 有序列表
+<ol type="a/A/i/I" start="2">
+	<li></li>		列表项
+	<li></li>		
+</ol>
+start:  从几开始
+
+-自定义列表
+<dl>
+	<dt></dt>		小标题
+	<dd></dd>  		解释标题
+	<dd></dd>  		解释标题
+	<dd></dd>  		解释标题
+</dl>
+
+-------------10. 音乐标签-----------
+<embed src="1.mp3">
+
+-------------11. 滚动-----------
+
+-------------12. 网页关键字-----------
+<meta name="keywords" content="sad,asda,阿萨德">
+
+-------------13. 网页描述-----------
+<meta name="description" content="asdasd">
+
+-------------14. 网页重定向-----------
+<meta http-equiv="refresh" content="5; http://baidu.com">
+
+-------------15. 连接外部样式表-----------
+<link rel="stylesheet" type="text/css" href="1.css">
+
+-------------16. 表格-----------
+展示数据. 是对网页重构的一个有益补充
+<table>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+快速建表
+table>tr*3>td*3
+
+表头		 	<caption></caption>
+合并行    	colspan="2"
+合并列    	rowspan="2"
+加粗居中		<th></th>
+
+- 边框颜色
+
+-------------17. 表单-----------
+作用:收集信息
+组成:
+	1.提示信息
+	2.表单控件
+	3.表单域
+单选:	
+	性别:<input type="radio" name="sex" checked="checked">男</input><input type="radio" name="sex">女</input> <br>
+
+-------------18. 下拉列表-----------
+<select multiple="mutiple">
+	<option value="">北京</option>
+	<option value="">河南</option>
+	<option value="" selected="selected">山西</option>
+</select>
+分组:
+市(区):
+	<select>
+		<optgroup label="北京市">
+			<option>昌平区</option>
+			<option>昌平区</option>
+			<option>昌平区</option>
+			<option>昌平区</option>
+			<option>昌平区</option>
+		</optgroup>
+	</select>
+
+-------------19. 多选框-----------
+<input type="checkbox" checked="checked">抽烟</input>
+<input type="checkbox">喝酒</input>
+<input type="checkbox">烫头</input> <br>
+
+-------------20. 多行文本框-----------
+<textarea cols="40" rows="3">hello,world!</textarea> <br>
+
+-------------21. 文件上传控件-----------
+<input type="file"></input>
+
+-------------22. 按钮-----------
+文本按钮:
+	<input type="button" value="提交"></input> <br>
+提交按钮:
+	<input type="submit"></input>
+图片按钮:
+	<input type="image" src="1"></input>
+重置按钮:
+	<input type="reset"></input>
+
+-------------23. 表单信息分组-----------
+<fieldset>
+<legend>分组信息</legend>
+</fieldset>
+
+-------------24. h5表单控件-----------
+<input type="url"></input>
+<input type="date"></input>
+<input type="time"></input>
+<input type="email"></input>
+<input type="number" step="3"></input>
+<input type="range" step="10"></input>
+
+-------------25. 标签语义化-----------
+好的语义化的网站就是去除样式表之后结构还是很清晰
+1. 尽可能使用无语义的标签div和span;
+2. 在语义不明显时

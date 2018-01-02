@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise</title>
+    <!--<script src="jquery.js" />-->
+    <script src="jquery.js"></script>
+
+    <script>
+
+        var jq = $.noConflict();
+    	jq(document).ready(function(){
+
+    	    jq('.button').click(function(){
+                jq('.slidedown').slideDown('slow');
+    	    });
+
+
+            function add() {
+//                var a = a || 3;
+//                var b = b || 5
+                var a = arguments[0] || 3;
+                var b = arguments[1] || 5;
+                alert(a * b);
+            }
+
+            // 正常调用
+//            add(3, 4);
+            // 现在我想只设置b的值,a使用默认值4 .. . .. 这样写不好使,我想问有什么方法可以这样做
+//            add(b=4)
+            add();
+
+    	});
+    </script>
+
+	<style type="text/css">
+	.button {
+		background-color: green;
+		
+	}
+	.slidedown {
+		display: none;
+	}
+
+	</style>
+
+</head>
+<body>
+
+<div class="button">
+	点我下滑
+</div>
+<div class="slidedown">
+	hello, world!
+</div>
+
+</body>
+</html>

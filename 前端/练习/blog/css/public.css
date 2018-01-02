@@ -1,0 +1,67 @@
+/*网页的公共内容*/
+
+body {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 80px;
+}
+
+/*控制导航条高度*/
+.navbar, .navbar-brand, .navbar-nav li a {
+    height: 80px;
+}
+
+/*控制导航条内容垂直居中*/
+.navbar-brand, .navbar-nav li a {
+    line-height: 50px;
+}
+
+/*控制导航条右边内容的右边距*/
+.navbar-nav, .navbar-toggle {
+    margin-right: 100px;
+}
+
+/*控制页面缩小后的展开按钮垂直居中*/
+.navbar-toggle {
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+/*控制导航条颜色*/
+.navbar-default {
+    background-color: white;
+    border-radius: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
+}
+
+/*控制导航条brand的左边距和字体大小*/
+.navbar-brand {
+    margin-left: 100px;
+}
+
+/*控制导航条brand字体颜色和大小*/
+.navbar-default .navbar-brand {
+    font-size: 36px;
+    color: #61b0ff;
+    font-family: "Apple Chancery";
+    text-shadow: -5px 5px 0 rgba(97, 176, 255, 0.2);
+}
+
+/*控制导航条目录的字体和居右显示*/
+.navbar-nav li a {
+    text-align: right;
+}
+
+
+.footer-bg {
+    background-color: black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.footer-content {
+    color: white;
+    margin-bottom: -2px;
+}

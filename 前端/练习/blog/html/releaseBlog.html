@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>发布文章</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .blog-title {
+            width: 97%;
+            height: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            margin: 0 20px 20px 15px;
+        }
+        #text {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>发布文章</h2>
+    <br>
+    <br>
+    <!--标题-->
+    <div class="form-group">
+        <input type="text" class="form-control" id="exmapleInputTitle" placeholder="标题">
+    </div>
+    <!--描述-->
+    <div class="form-group">
+        <input type="text" class="form-control" id="exmapleInputDesc" placeholder="描述">
+    </div>
+    <!--正文-->
+    <div id="text" class="toolbar container-fluid">
+    </div>
+    <br>
+    <!--分类-->
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            分类
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <!--<li><a href=""></a></li>-->
+            <!--<li><a href=""></a></li>-->
+            <!--<li><a href=""></a></li>-->
+        </ul>
+    </div>
+
+    <br>
+    <!--操作按钮-->
+    <div class="btn btn-primary" id="compose">发表</div>
+    <div class="btn btn-primary" id="save">保存</div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="../js/wangEditor.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/userData.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+
+    var editor = new E('#text')
+    editor.customConfig.uploadImgServer = '/upload-img'
+    editor.customConfig.uploadImgHooks = {
+
+    }
+    editor.create()
+
+    // 处理按钮点击
+    $(function () {
+
+        getUserInfo(function (users) {
+            var userId = users[0].userId;   // 用户id
+            var categorys = []              // 分类列表
+            var categoryId = ''             // 当前选择的分类Id
+
+            // 获取所有分类
+            $.ajax({
+                url: host + 'getAllCategory',
+                type: 'POST',
+                dataType: 'JSON',
+                data: {'userId': userId},
+                success: function (data, status) {
+                    if (status == 'success') {
+                        console.log('获取的分类--'+data.data[0].name);
+                        categorys = data.data;
+                        var dropmenuElement = $('.dropdown-menu');
+                        for (i in categorys) {
+                            category = categorys[i];
+                            console.log('获取的分类--'+category.name);
+                            var liElement = $('<li></li>');
+                            var aElement = $('<a id="category"+i></a>');
+                            var sepElement= $('<li role="separator" class="divider"></li>')
+                            aElement.html(category.name);
+                            liElement.append(aElement);
+                            dropmenuElement.append(liElement);
+                            if (i < categorys.length - 1) {
+                                dropmenuElement.append(sepElement);
+                            }
+                        }
+
+                        $('.dropdown-menu a').click(function () {
+                            var index=$('.dropdown-menu a').index($(this));
+                            categoryId = categorys[index].categoryId;
+                            var name = categorys[index].name;
+                            console.log('点击分类--'+name);
+                            $('#dropdownMenu1').html(name+' <span class="caret"></span>');
+                        });
+                    } else {
+                        console.log('请求所有分类失败');
+                    }
+                }
+            })
+
+            $('#compose').click(function (e) {
+                // 发表文章
+                // 1.获取标题title
+                var title = $('#exmapleInputTitle').val();
+                // 2.获取描述desc
+                var desc = $('#exmapleInputDesc').val();
+                // 3.获取正文text
+                var text = editor.txt.text();
+                console.log('userId:'+userId+'\n分类id:'+categoryId+'\n标题:'+title+'\n描述:'+desc+'\n正文:'+text);
+                composeBlog(title, text, desc);
+            });
+            $('#save').click(function (e) {
+                // 保存文章
+
+            });
+
+            function composeBlog(title, text, desc) {
+                $.ajax({
+                    url: host + 'composeBlog',
+                    type: 'POST',
+                    dataType: 'JSON',
+                    data: {'userId': userId, 'categoryId': categoryId, 'title': title, 'desc': desc, 'text': text},
+                    success: function (data, status) {
+                        if (status == 'success') {
+                            console.log('发布文章成功--'+data);
+                        } else {
+                            console.log('发布文章失败');
+                        }
+                    }
+                });
+            }
+
+
+
+        });
+    })
+
+</script>
+
+</html>

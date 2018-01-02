@@ -1,0 +1,18 @@
+ctrl+c		复制
+ctrl+v		粘贴
+ctrl+x		剪切一行或删除一行
+ctrl+d		复制本行到下一行
+ctrl+z		退回之前操作
+ctrl+shift+z	已经做好的退回之后的下一步
+ctrl+a		全选
+ctrl+/ 		注释行
+ctrl+shift+/	注释选定区域
+ctrl+g		查找行号
+ctrl+shift+up/down	上下移动代码
+table		补齐代码
+ctrl+f		查找文本
+
+
+
+
+	
